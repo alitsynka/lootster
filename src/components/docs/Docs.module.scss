@@ -1,0 +1,47 @@
+@use '../../assets/styles/mixines' as m;
+@use '../../assets/styles/variables' as v;
+
+.Wrapper {
+  @include m.CommonWrapper;
+
+  .Container {
+    @include m.CommonContainer(v.$defaultContainerPadding, 0);
+    @include m.FLexRow;
+    justify-content: space-between;
+    @media screen and (max-width: v.$MaxWidthL) {
+      flex-direction: column;
+      gap: 40px;
+      padding-bottom: 140px;
+    }
+
+    .DescBlock {
+      @include m.FLexCol;
+      align-items: flex-start;
+
+      .Title {
+        @include m.TitleOfSection;
+      }
+
+      .Desc {
+        @include m.FontRalewayRegular(16, 28, v.$defaultDescFontColor);
+        margin-bottom: 35px;
+      }
+
+      .Btn {
+        @include m.CommonBtn;
+        @media screen and (max-width: v.$MaxWidthL) {
+          position: absolute;
+          bottom: 40px;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+
+    .Gnoms {
+      @media screen and (max-width: v.$MaxWidthS) {
+        max-height: 150px;
+      }
+    }
+  }
+}

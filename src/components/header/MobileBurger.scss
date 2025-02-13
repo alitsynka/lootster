@@ -1,0 +1,74 @@
+@use '../../assets/styles/mixines' as m;
+@use '../../assets/styles/variables' as v;
+
+.bm-burger-button {
+  width: 24px;
+  height: 17px;
+  position: relative;
+
+  > button {
+    position: relative;
+    right: 0;
+    width: 24px !important;
+    height: 17px !important;
+  }
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-burger-bars-hover {
+  background: v.$defaultBGColor;
+}
+
+.bm-cross-button {
+  display: none;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: calc(100vh - 100px) !important;
+  width: 100% !important;
+  top: 100px !important;
+  z-index: 99999999 !important;
+  overflow: hidden !important;
+}
+
+.bm-menu {
+  height: calc(100vh - 98px) !important;
+  overflow: hidden !important;
+  background: v.$defaultBGColor !important;
+  background: pink !important;
+  padding: 20px 20px 40px 20px;
+
+  > nav {
+    height: 100%;
+    overflow: auto;
+
+    > ul {
+      @include m.FLexCol;
+      align-items: flex-end;
+      gap: 25px;
+
+      li {
+        a {
+          @include m.FontRalewayRegular(15, 16, v.$defaultFontColor);
+          text-align: right;
+        }
+
+        .ActiveNavLink {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.bm-overlay{
+  background: #0a0a0a;
+}

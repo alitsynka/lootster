@@ -1,0 +1,39 @@
+@use '../../assets/styles/mixines' as m;
+@use '../../assets/styles/variables' as v;
+
+
+.Wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .MainImg {
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+  }
+
+  .CornerLeftTop {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .CornerRightTop {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .CornerLeftBottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .CornerRightBottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

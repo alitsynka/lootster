@@ -1,0 +1,91 @@
+@use '../../assets/styles/mixines' as m;
+@use '../../assets/styles/variables' as v;
+
+.Wrapper {
+  @include m.CommonWrapper;
+
+  .Container {
+    @include m.CommonContainer(v.$defaultContainerPadding, 0);
+
+    .Title {
+      @include m.TitleOfSection;
+    }
+
+    .ContainerOfSections {
+      width: 100%;
+      @include m.FLexCol;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      > section {
+        @include m.FLexRow;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 25px;
+        @media screen and (max-width: v.$MaxWidthL) {
+          flex-direction: column;
+        }
+
+        .TitleBlock {
+          width: 100%;
+          padding: 20px;
+          background: url('../../assets/images/tokenomics.png') no-repeat;
+          background-size: 100% 100%;
+
+          .Title {
+            @include m.FontRalewayRegular(26, 44, v.$defaultFontColor);
+            margin-bottom: 15px;
+          }
+
+          .Desc {
+            @include m.FontRalewayRegular(16, 28, v.$defaultFontColor);
+            opacity: 0.9;
+          }
+        }
+      }
+
+      .DiagramSection {
+        width: 100%;
+
+        .ImageContainer {
+          width: 100%;
+          height: 100%;
+          flex-basis: 50%;
+          flex-grow: 1;
+          background: url('../../assets/images/tokenomicsGraphics.png') no-repeat;
+          background-size: 100% 100%;
+          min-height: 450px;
+          @media screen and (max-width: v.$MaxWidthL) {
+            min-height: 400px;
+          }
+          @media screen and (max-width: v.$MaxWidthS) {
+            min-height: 340px;
+          }
+        }
+
+        .DisagramDescBlock {
+          width: 100%;
+          flex-basis: 50%;
+          flex-grow: 1;
+          @include m.FLexCol;
+          gap: 20px;
+
+          div {
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            @include m.CommonCornersStyles;
+
+            p {
+              @include m.FontRalewayRegular(16, 29, v.$defaultFontColor);
+            }
+          }
+        }
+      }
+
+      .DescSection {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

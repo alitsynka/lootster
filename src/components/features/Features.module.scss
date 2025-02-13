@@ -1,0 +1,67 @@
+@use '../../assets/styles/mixines' as m;
+@use '../../assets/styles/variables' as v;
+
+.Wrapper {
+  @include m.CommonWrapper;
+
+  .Container {
+    @include m.CommonContainer(v.$defaultContainerPadding, 0);
+
+    .Title {
+      @include m.TitleOfSection;
+    }
+
+    .CardWrapper {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-rows: repeat(auto-fill, minmax(270px, auto));
+      @media screen and (max-width: v.$MaxWidthS) {
+        grid-gap: 10px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(230px, auto));
+      }
+      @media screen and (max-width: 525px) {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(270px, auto));
+      }
+
+      .CardSection {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 999;
+        background: url("../../assets/images/book.png") no-repeat;
+        background-size: 100% 100%;
+        min-height: 270px;
+        @media screen and (max-width: v.$MaxWidthS) {
+          min-height: 230px;
+        }
+        @media screen and (max-width: 525px) {
+          min-height: 320px;
+
+        }
+        @media screen and (max-width: 440px) {
+          min-height: 270px;
+        }
+
+        p {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          @include m.FontRalewayRegular(16, 27, v.$defaultFontColor);
+          text-align: center;
+          width: 100%;
+          padding: 0 30px;
+          @media screen and (max-width: 525px) {
+            padding: 0 45px;
+          }
+        }
+      }
+    }
+  }
+}

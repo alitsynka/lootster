@@ -1,0 +1,27 @@
+.slick-list {
+  //overflow: visible !important; /* Позволяет отображать часть третьего слайда */
+}
+
+.slick-track {
+  display: flex !important;
+  max-width: 100%;
+  @media screen and (max-width: 540px) {
+    justify-content: center !important;
+  }
+}
+
+.slick-slide {
+  flex: 0 0 auto !important; // Запрещает растягивание
+  width: auto !important;
+  min-width: calc(100% / 4) !important; /* Устанавливаем ширину слайдов */
+
+  @media screen and (max-width: 768px) {
+    min-width: calc(100% / 2) !important; /* 2 слайда */
+  }
+  @media screen and (max-width: 640px) {
+    min-width: calc(100% / 5) !important;
+  }
+  @media screen and (max-width: 540px) {
+    min-width: 100% !important; /* 1 слайд на всю ширину */
+  }
+}

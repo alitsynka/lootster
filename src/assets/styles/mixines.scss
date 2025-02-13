@@ -1,0 +1,120 @@
+@use './variables' as v;
+
+@mixin breakMaxHeight() {
+  @media screen and (max-height: 615px) {
+    @content
+  }
+}
+
+@mixin FLexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin FLexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin CommonWrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0 130px;
+  @include FLexRow;
+  justify-content: center;
+  background: v.$defaultBGColor;
+
+  @media screen and (max-width: v.$MaxWidthXL) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: v.$MaxWidthL) {
+    padding: 0 25px;
+  }
+}
+
+@mixin CommonContainer($paddingVertical, $paddingHorizontal) {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  padding: $paddingVertical + px $paddingHorizontal + px;
+  position: relative;
+
+  @media screen and (max-width: v.$MaxWidthXL) {
+    padding: 60px 0;
+  }
+}
+
+@mixin FontRalewayRegular($fontSize, $lineHeight, $color) {
+  font-family: var(--font-Press-Start-2P), sans-serif;
+  font-weight: 400;
+  font-size: $fontSize + px;
+  line-height: $lineHeight + px;
+  color: $color;
+  text-align: left;
+}
+
+@mixin TitleOfSection {
+  @include FontRalewayRegular(36, 46, v.$defaultFontColor);
+  margin-bottom: 50px;
+  @media screen and (max-width: v.$MaxWidthS) {
+    @include FontRalewayRegular(30, 36, v.$defaultFontColor);
+    margin-bottom: 40px;
+  }
+}
+
+@mixin scrollBar() {
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 100%;
+    border-radius: 2px;
+    background-color: v.$defaultFontColor
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(122, 148, 236, 0.3) !important;
+    border-radius: 10px;
+  }
+}
+
+@mixin CommonBtn {
+  width: 100%;
+  max-width: 430px;
+  padding: 15px 30px;
+  background: url("../../assets/images/btn.png") no-repeat;
+  background-size: 100% 100%;
+  @include FontRalewayRegular(14, 30, v.$defaultFontColor);
+  text-align: center;
+  @media screen and (max-width: v.$MaxWidthS) {
+    max-width: 100%;
+  }
+}
+@mixin CommonCornersStyles{
+  .CornerLeftTop {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .CornerRightTop {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotateY(180deg);
+  }
+  .CornerLeftBottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotateX(180deg);
+  }
+  .CornerRightBottom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: rotateY(180deg) rotateX(180deg);
+  }
+}
+

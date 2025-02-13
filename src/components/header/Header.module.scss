@@ -1,0 +1,69 @@
+@use '../../assets/styles/mixines' as m;
+@use '../../assets/styles/variables' as v;
+
+.Wrapper {
+  @include m.CommonWrapper;
+  height: auto;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+
+  .Container {
+    @include m.CommonContainer(v.$defaultContainerPadding, 0);
+    @include m.FLexRow;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 43px 0 !important;
+
+    .Title {
+      @include m.FontRalewayRegular(24, 28, v.$defaultFontColor);
+    }
+
+    .Nav {
+      @media screen and (max-width: v.$MaxWidthL) {
+        display: none;
+      }
+
+      > ul {
+        @include m.FLexRow;
+        gap: 40px;
+        @media screen and (max-width: v.$MaxWidthL) {
+          @include m.FLexCol;
+          align-items: flex-end;
+        }
+        li {
+          .NavLink {
+            @include m.FontRalewayRegular(15, 16, v.$defaultFontColor);
+          }
+
+          .ActiveNavLink {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+
+    .BurgerBtn {
+      width: 24px;
+      height: 17px;
+      background: url("../../assets/images/burger.svg") no-repeat;
+      background-size: contain;
+      display: none;
+
+    }
+
+    .MenuMobileWrapper {
+      display: none;
+
+      @media screen and (max-width: v.$MaxWidthL) {
+        display: block;
+      }
+    }
+
+
+    .BurgerBtnVisible {
+      display: block;
+    }
+  }
+}

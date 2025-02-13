@@ -1,0 +1,87 @@
+@use '../../assets/styles/mixines' as m;
+@use '../../assets/styles/variables' as v;
+
+.Wrapper {
+  @include m.CommonWrapper;
+  //min-height: 100vh;
+  position: relative;
+
+  .Container {
+    @include m.CommonContainer(v.$defaultContainerPadding, 0);
+    position: static;
+    @include m.FLexRow;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 200px !important;
+
+    @media screen and (max-width: v.$MaxWidthL) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .SectionDesc {
+      @include m.FLexCol;
+      row-gap: 25px;
+      align-items: flex-start;
+      flex-basis: 50%;
+      flex-grow: 1;
+      flex-shrink: 2;
+
+      @media screen and (max-width: v.$MaxWidthL) {
+        flex-basis: auto;
+        flex-grow: initial;
+      }
+
+      .Title {
+        @include m.FontRalewayRegular(45, 58, v.$defaultFontColor);
+        @media screen and (max-width: v.$MaxWidthS) {
+          @include m.FontRalewayRegular(40, 52, v.$defaultFontColor);
+        }
+        @media screen and (max-width: v.$MaxWidthXS) {
+          @include m.FontRalewayRegular(34, 46, v.$defaultFontColor);
+        }
+      }
+
+      .Desc {
+        @include m.FontRalewayRegular(16, 28, v.$defaultFontColor);
+        opacity: 0.7;
+        @media screen and (max-width: v.$MaxWidthXS) {
+          @include m.FontRalewayRegular(14, 25, v.$defaultFontColor);
+        }
+      }
+
+      .InviteBtn {
+
+
+      }
+    }
+
+    .SectionImg {
+      flex-basis: 50%;
+      flex-grow: 1;
+      flex-shrink: 1;
+      @media screen and (max-width: v.$MaxWidthXL) {
+        flex-basis: auto;
+      }
+      @media screen and (max-width: v.$MaxWidthL) {
+        flex-basis: auto;
+        flex-grow: initial;
+      }
+      @media screen and (max-width: v.$MaxWidthS) {
+       width: 100%;
+      }
+
+      img {
+        width: 100%;
+        min-width: 400px;
+        @media screen and (max-width: v.$MaxWidthS) {
+          height: 100%;
+        }
+        @media screen and (max-width: v.$MaxWidthXS) {
+          min-width: 200px;
+        }
+      }
+    }
+  }
+}

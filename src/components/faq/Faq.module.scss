@@ -1,0 +1,94 @@
+@use '../../assets/styles/mixines' as m;
+@use '../../assets/styles/variables' as v;
+
+.Wrapper {
+  @include m.CommonWrapper;
+  position: relative;
+
+  .Container {
+    @include m.CommonContainer(v.$defaultContainerPadding, 0);
+    position: static;
+
+    .Title {
+      @include m.TitleOfSection;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 200px;
+        background: url("../../assets/images/chains.png") no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        left: 0;
+        height: 80px;
+        @media screen and (max-width: v.$MaxWidthXL) {
+          top: 157px;
+        }
+        @media screen and (max-width: v.$MaxWidthS) {
+          top: 135px;
+        }
+      }
+    }
+
+    .AccordionWrapper {
+      width: 100%;
+      padding-top: 80px;
+
+      .Accordion {
+        margin: 0 !important;
+        background: url("../../assets/images/accordionSummary.png") no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        z-index: 99999;
+
+        &:first-child {
+          .AccordionSummary {
+            padding-bottom: 35px;
+          }
+        }
+
+        &:nth-child(4) {
+          .AccordionSummary {
+            padding-bottom: 10px;
+          }
+        }
+
+        .AccordionSummary {
+          padding: 25px 50px 30px 50px;
+          background: none;
+          transition: 3s background ease-in;
+
+          .AccordionTitle {
+            @include m.FontRalewayRegular(26, 26, v.$accordionFontColor);
+
+            @media screen and (max-width: v.$MaxWidthS) {
+              @include m.FontRalewayRegular(20, 20, v.$accordionFontColor);
+            }
+          }
+        }
+
+        .AccordionSummaryClosed {
+          //background: url("../../assets/images/accordionSummary.png") no-repeat;
+          //background-size: 100% 100%;
+          //position: relative;
+          //z-index: 99999;
+        }
+
+        .AccordionDetails {
+          padding: 20px 50px 67px 50px;
+
+          .Desc {
+            @include m.FontRalewayRegular(16, 26, v.$accordionFontColor);
+          }
+        }
+      }
+
+      .AccordionOpen {
+        background: url("../../assets/images/faqBg.png") no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        z-index: 99999;
+      }
+    }
+  }
+}

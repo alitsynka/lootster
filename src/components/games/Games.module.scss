@@ -1,0 +1,60 @@
+@use '../../assets/styles/mixines' as m;
+@use '../../assets/styles/variables' as v;
+
+.Wrapper {
+  @include m.CommonWrapper;
+
+  .Container {
+    @include m.CommonContainer(v.$defaultContainerPadding, 0);
+
+    .Title {
+      @include m.TitleOfSection;
+    }
+
+    .ContainerOfSections {
+      display: grid;
+      gap: 15px;
+      grid-template-areas:
+                'box1 box1  box2 box3';
+
+      @media screen and (max-width: v.$MaxWidthM) {
+        grid-template-areas:
+                'box1 box1  box1 box1'
+                  'box2 box2 box3 box3';
+        > div{
+          max-height: 500px;
+        }
+      }
+
+
+      > div {
+        height: 100%;
+        width: 100%;
+
+        @media screen and (min-width: 1480px) {
+          min-height: 490px;
+          max-height: 490px;
+        }
+        &:first-child {
+          //@media screen and (max-width: v.$MaxWidthL) {
+          //  min-height: 430px;
+          //  max-height: 430px;
+          //}
+        }
+      }
+
+      .ImageBlock1 {
+        grid-area: box1;
+      }
+
+      .ImageBlock2 {
+        grid-area: box2;
+      }
+
+      .ImageBlock3 {
+        grid-area: box3;
+      }
+    }
+
+  }
+}
