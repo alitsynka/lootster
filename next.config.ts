@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
+
 const nextConfig: NextConfig = {
-  /* config options here */
+    output: "export", // Позволяет экспортировать статические файлы
+    basePath: "/lootster", // Укажите имя репозитория
+    assetPrefix: "/lootster/",
 };
+
+module.exports = nextConfig;
 
 export default nextConfig;
