@@ -16,9 +16,7 @@ export const RoadMap = () => {
         responsive:[{
             breakpoint:760,
             settings:{
-                slidesToShow: 1,
-                // variableWidth: false,
-                // centerMode: true,
+                slidesToShow: 1
             }
         }],
     };

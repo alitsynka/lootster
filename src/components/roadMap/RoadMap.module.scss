@@ -11,16 +11,17 @@
     position: static;
     min-height: 980px;
 
-    @media screen and (max-width: v.$MaxWidthS) {
-      min-height: 780px;
+    @media screen and (max-width: v.$MaxWidthL) {
+      min-height: 1050px;
     }
-    @media screen and (max-width: v.$MaxWidthXS) {
-      min-height: 820px;
+    @media screen and (max-width: v.$MaxWidthS) {
+      min-height: 850px;
     }
     @media screen and (max-width: 420px) {
-      min-height: 860px;
-    } @media screen and (max-width: 380px) {
-      min-height: 900px;
+      min-height: 890px;
+    }
+    @media screen and (max-width: 380px) {
+      min-height: 930px;
     }
 
     .Title {
