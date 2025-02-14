@@ -83,7 +83,7 @@ const AccordionCustom: FC<AccordionCustomType> = ({handleChangeAction, title, de
             <AccordionSummary
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
-                className={`${style.AccordionSummary} ${expanded ? style.AccordionSummaryClosed : ''}`}
+                className={`${style.AccordionSummary} ${!expanded ? style.AccordionSummaryClosed : ''}`}
             >
                 <p className={style.AccordionTitle}>{title}</p>
             </AccordionSummary>

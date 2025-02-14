@@ -37,8 +37,7 @@
 
       .Accordion {
         margin: 0 !important;
-        background: url("../../assets/images/accordionSummary.png") no-repeat;
-        background-size: 100% 100%;
+        background: none;
         position: relative;
         z-index: 999;
 
@@ -50,14 +49,25 @@
 
         &:nth-child(4) {
           .AccordionSummary {
-            padding-bottom: 10px;
+            padding-bottom: 20px;
+          }
+          .AccordionSummaryClosed {
+            background: url("../../assets/images/accordionSummaryClosed.png") no-repeat;
+            background-size: 100% 100%;
+            transition: 0s background linear;
+            transition-delay: 320ms;;
           }
         }
 
         .AccordionSummary {
           padding: 25px 50px 30px 50px;
-          background: none;
-          transition: 3s background ease-in;
+          background: url("../../assets/images/accordionSummary.png") no-repeat;
+          background-size: 100% 100%;
+
+
+          @media screen and (max-width: v.$MaxWidthS) {
+            padding: 20px 20px 20px 20px;
+          }
 
           .AccordionTitle {
             @include m.FontRalewayRegular(26, 26, v.$accordionFontColor);
@@ -65,21 +75,28 @@
             @media screen and (max-width: v.$MaxWidthS) {
               @include m.FontRalewayRegular(20, 20, v.$accordionFontColor);
             }
+            @media screen and (max-width: v.$MaxWidthXS) {
+              @include m.FontRalewayRegular(16, 20, v.$accordionFontColor);
+            }
           }
         }
 
-        .AccordionSummaryClosed {
-          //background: url("../../assets/images/accordionSummary.png") no-repeat;
-          //background-size: 100% 100%;
-          //position: relative;
-          //z-index: 99999;
-        }
+
 
         .AccordionDetails {
           padding: 20px 50px 67px 50px;
+          background: url("../../assets/images/accordionDetails.png") no-repeat;
+          background-size: 100% 100%;
+          @media screen and (max-width: v.$MaxWidthXS) {
+            padding: 0 20px 37px 20px;
+          }
 
           .Desc {
             @include m.FontRalewayRegular(16, 26, v.$accordionFontColor);
+
+            @media screen and (max-width: v.$MaxWidthXS) {
+              @include m.FontRalewayRegular(14, 21, v.$accordionFontColor);
+            }
           }
         }
       }
