@@ -8,6 +8,7 @@
   .Container {
     @include m.CommonContainer(v.$defaultContainerPadding, 0);
     position: static;
+    padding-bottom: 0 !important;
 
     .Title {
       @include m.TitleOfSection;
