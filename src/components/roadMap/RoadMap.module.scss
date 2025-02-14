@@ -10,11 +10,17 @@
     @include m.CommonContainer(v.$defaultContainerPadding, 0);
     position: static;
     min-height: 980px;
+
     @media screen and (max-width: v.$MaxWidthS) {
-      min-height: 1080px;
+      min-height: 780px;
     }
-    @media screen and (max-width: 360px) {
-      min-height: 1250px;
+    @media screen and (max-width: v.$MaxWidthXS) {
+      min-height: 820px;
+    }
+    @media screen and (max-width: 420px) {
+      min-height: 860px;
+    } @media screen and (max-width: 380px) {
+      min-height: 900px;
     }
 
     .Title {
