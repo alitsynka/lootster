@@ -39,7 +39,7 @@
         background: url("../../assets/images/accordionSummary.png") no-repeat;
         background-size: 100% 100%;
         position: relative;
-        z-index: 99999;
+        z-index: 999;
 
         &:first-child {
           .AccordionSummary {
@@ -87,7 +87,7 @@
         background: url("../../assets/images/faqBg.png") no-repeat;
         background-size: 100% 100%;
         position: relative;
-        z-index: 99999;
+        z-index: 999;
       }
     }
   }

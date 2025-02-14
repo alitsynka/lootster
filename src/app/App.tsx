@@ -7,10 +7,12 @@ import {RoadMap} from "@/components/roadMap/RoadMap";
 import {Faq} from "@/components/faq/Faq";
 import {Main} from "@/components/main/Main";
 import {Header} from "@/components/header/Header";
+import './globals.css';
+
 
 function App() {
     return (
-        <div>
+        <div className={'app'}>
             <Header/>
             <Main/>
             <Features/>

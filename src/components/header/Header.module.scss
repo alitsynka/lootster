@@ -31,7 +31,9 @@
           @include m.FLexCol;
           align-items: flex-end;
         }
+
         li {
+
           .NavLink {
             @include m.FontRalewayRegular(15, 16, v.$defaultFontColor);
           }
@@ -42,7 +44,6 @@
         }
       }
     }
-
 
     .BurgerBtn {
       width: 24px;
@@ -61,9 +62,15 @@
       }
     }
 
-
     .BurgerBtnVisible {
       display: block;
+    }
+
+    @media screen and (max-width: v.$MaxWidthS) {
+      padding: 20px 0 !important;
+      .Title {
+        @include m.FontRalewayRegular(18, 24, v.$defaultFontColor);
+      }
     }
   }
 }

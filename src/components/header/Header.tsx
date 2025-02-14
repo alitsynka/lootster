@@ -20,6 +20,7 @@ export const Header = () => {
 
     const toggleMenu = () => {
         setIsOpenMenu(!isOpenMenu);
+        console.log(isOpenMenu);
     };
 
     return (
@@ -30,8 +31,6 @@ export const Header = () => {
                 <nav className={`${style.Nav}`}>
                     <ListOfNavigation/>
                 </nav>
-                {/*<button className={`${style.BurgerBtn} ${isOpenMenu ? style.BurgerBtnVisible : ''}`}*/}
-                {/*        onClick={toggleMenu}></button>*/}
                 <div className={style.MenuMobileWrapper}>
                     <Menu isOpen={isOpenMenu}
                           onOpen={toggleMenu}
@@ -52,27 +51,36 @@ type ListOfNavigationType = {
 }
 const ListOfNavigation: FC<ListOfNavigationType> = ({toggleMenu}) => {
 
+    const closeMenuHandler = () => {
+        if (toggleMenu) {
+            toggleMenu()
+        }
+    }
 
     return (
         <ul>
-            <li onClick={toggleMenu}>
-                <Link to="Features" spy={true} offset={-100} smooth={true} duration={800} className={style.NavLink}
+            <li>
+                <Link onClick={closeMenuHandler} to="Features" spy={true} offset={-100} smooth={true} duration={800}
+                      className={style.NavLink}
                       activeClass={style.ActiveNavLink}>Features</Link>
             </li>
-            <li onClick={toggleMenu}>
-                <Link to="Games" spy={true} hashSpy={true} offset={-100} smooth={true} duration={800}
+            <li>
+                <Link onClick={closeMenuHandler} to="Games" spy={true} hashSpy={true} offset={-100} smooth={true}
+                      duration={800}
                       className={style.NavLink} activeClass={style.ActiveNavLink}>Games</Link>
             </li>
-            <li onClick={toggleMenu}>
-                <Link to="Tokenomics" spy={true} hashSpy={true} offset={-50} smooth={true} duration={800}
+            <li>
+                <Link onClick={closeMenuHandler} to="Tokenomics" spy={true} hashSpy={true} offset={-50} smooth={true}
+                      duration={800}
                       className={style.NavLink} activeClass={style.ActiveNavLink}>Tokenomics</Link>
             </li>
-            <li onClick={toggleMenu}>
-                <Link to="Roadmap" spy={true} hashSpy={true} offset={-50} smooth={true} duration={800}
+            <li>
+                <Link onClick={closeMenuHandler} to="Roadmap" spy={true} hashSpy={true} offset={-50} smooth={true}
+                      duration={800}
                       className={style.NavLink} activeClass={style.ActiveNavLink}>Roadmap</Link>
             </li>
-            <li onClick={toggleMenu}>
-                <Link to="Docs" spy={true} hashSpy={true} offset={-50} smooth={true} duration={800}
+            <li>
+                <Link onClick={closeMenuHandler} to="Docs" spy={true} hashSpy={true} offset={-50} smooth={true} duration={800}
                       className={style.NavLink} activeClass={style.ActiveNavLink}>Docs</Link>
             </li>
         </ul>

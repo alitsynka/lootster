@@ -16,6 +16,7 @@
     @media screen and (max-width: 360px) {
       min-height: 1250px;
     }
+
     .Title {
       @include m.TitleOfSection;
     }
@@ -78,7 +79,9 @@
           height: 100%;
           min-height: 100%;
           padding: 20px;
-
+          @media screen and (max-width: v.$MaxWidthS) {
+            padding: 20px 10px;
+          }
           .Img {
             object-fit: contain;
             max-height: 350px;
@@ -89,21 +92,26 @@
               max-height: 280px;
             }
             @media screen and (max-width: v.$MaxWidthS) {
-              max-height: 230px;
+              max-height: 170px;
             }
           }
 
           .SubTitle {
             @include m.FontRalewayRegular(14, 22, v.$defaultDescFontColor);
-            margin: 10px 0;
+            margin: 20px 0;
+            @media screen and (max-width: v.$MaxWidthS) {
+              @include m.FontRalewayRegular(12, 16, v.$defaultDescFontColor);
+            }
           }
 
           .Title {
             @include m.FontRalewayRegular(26, 42, v.$defaultFontColor);
             margin-bottom: 20px;
             @media screen and (max-width: 1700px) {
-              font-size: 24px;
-              line-height: 36px;
+              @include m.FontRalewayRegular(24, 36, v.$defaultFontColor);
+            }
+            @media screen and (max-width: v.$MaxWidthS) {
+              @include m.FontRalewayRegular(21, 28, v.$defaultFontColor);
             }
           }
 
@@ -120,6 +128,9 @@
               opacity: 0.9;
               @include m.FLexRow;
               align-items: flex-start;
+              @media screen and (max-width: v.$MaxWidthS) {
+                @include m.FontRalewayRegular(14, 21, v.$defaultFontColor);
+              }
 
               .Dot {
                 margin-right: 15px;
