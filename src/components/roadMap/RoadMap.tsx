@@ -9,9 +9,12 @@ export const RoadMap = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 900,
         slidesToShow: 2,
+        autoplay: true,
+        autoplaySpeed: 10000,
         slidesToScroll: 1,
+        pauseOnHover: true,
         variableWidth: true,
         responsive:[{
             breakpoint:760,
