@@ -51,6 +51,7 @@
           .AccordionSummary {
             padding-bottom: 20px;
           }
+
           .AccordionSummaryClosed {
             background: url("../../assets/images/accordionSummaryClosed.png") no-repeat;
             background-size: 100% 100%;
@@ -67,6 +68,7 @@
 
           @media screen and (max-width: v.$MaxWidthS) {
             padding: 20px 20px 20px 20px;
+            background: url("../../assets/images/accordionSummaryMobile.png") no-repeat;
           }
 
           .AccordionTitle {
@@ -82,13 +84,13 @@
         }
 
 
-
         .AccordionDetails {
           padding: 20px 50px 67px 50px;
           background: url("../../assets/images/accordionDetails.png") no-repeat;
           background-size: 100% 100%;
           @media screen and (max-width: v.$MaxWidthXS) {
             padding: 0 20px 37px 20px;
+            background: url("../../assets/images/accordionDetailsMobile.png") no-repeat;
           }
 
           .Desc {
