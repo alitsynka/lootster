@@ -69,6 +69,7 @@
           @media screen and (max-width: v.$MaxWidthS) {
             padding: 20px 20px 20px 20px;
             background: url("../../assets/images/accordionSummaryMobile.png") no-repeat;
+            background-size: 100% 100%;
           }
 
           .AccordionTitle {
@@ -91,6 +92,7 @@
           @media screen and (max-width: v.$MaxWidthXS) {
             padding: 0 20px 37px 20px;
             background: url("../../assets/images/accordionDetailsMobile.png") no-repeat;
+            background-size: 100% 100%;
           }
 
           .Desc {
