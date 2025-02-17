@@ -13,27 +13,15 @@
     width: 100%;
   }
 
-  .CornerLeftTop {
+  .Corners {
+    height: 100%;
+    width: 100%;
     position: absolute;
-    left: 0;
-    top: 0;
-  }
+    z-index: 9999;
+    background: url('../../assets/images/blackSquare.svg') top left / 10px 10px no-repeat, /* верхний левый угол */
+    url('../../assets/images/blackSquare.svg') top right / 10px 10px no-repeat, /* верхний правый угол */
+    url('../../assets/images/blackSquare.svg') bottom left / 10px 10px no-repeat, /* нижний левый угол */
+    url('../../assets/images/blackSquare.svg') bottom right / 10px 10px no-repeat; /* нижний правый угол */
 
-  .CornerRightTop {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .CornerLeftBottom {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-
-  .CornerRightBottom {
-    position: absolute;
-    right: 0;
-    bottom: 0;
   }
 }

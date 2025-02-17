@@ -1,8 +1,6 @@
 'use client'
 import style from './Tokenomics.module.scss';
 import Image from "next/image";
-import diagram from '../../assets/images/tokenomicsGraphics.png';
-import ltrBackgroundSection from '../../assets/images/ltrBackgroundSection.svg';
 import blackSquare from "@/assets/images/blackSquare.svg";
 import {FC} from "react";
 
@@ -22,7 +20,7 @@ export const Tokenomics = () => {
                 <div className={style.ContainerOfSections}>
                     <section className={style.DescSection}>
                         <div className={style.TitleBlock}>
-                            <h3 className={style.Title}>Ton</h3>
+                            <h3 className={style.Title}>TON</h3>
                             <p className={style.Desc}>An exclusive reward token, obtainable only by opening chests.</p>
                         </div>
                         <div className={style.TitleBlock}>

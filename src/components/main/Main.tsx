@@ -1,8 +1,6 @@
 import style from './Main.module.scss';
-import Image from "next/image";
-import portal from '../../assets/images/portal.png'
-import {Link} from 'react-scroll';
 import {CommonBtn} from "@/components/commonBtn/CommonBtn";
+import {AnimatedBlock} from "@/components/main/AnimatedBlock";
 
 export const Main = () => {
 
@@ -19,9 +17,7 @@ export const Main = () => {
                         outlined in our roadmap.</p>
                     <CommonBtn title={'Invite 100/100'}/>
                 </section>
-                <section className={style.SectionImg}>
-                    <Image src={portal} alt={'portal'}/>
-                </section>
+                <AnimatedBlock/>
             </div>
         </div>
     )

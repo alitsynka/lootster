@@ -3,7 +3,7 @@ import style from './Games.module.scss';
 import Image from "next/image";
 import game1 from '../../assets/images/game1.png';
 import game2 from '../../assets/images/game2.png';
-import game3 from '../../assets/images/game3.png';
+import game3 from '../../assets/images/game33.png';
 import {CommonImgWrapper} from "@/components/commonImgWrapper/CommonImgWrapper";
 
 export const Games = () => {

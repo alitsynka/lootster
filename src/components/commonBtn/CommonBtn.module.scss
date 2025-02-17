@@ -6,17 +6,29 @@
   width: 100%;
   max-width: 430px;
 
-  //@include m.CommonBtn;
 
   .Btn {
     width: 100%;
-    background: url("../../assets/images/btn.png") no-repeat;
-    background-size: 100% 100%;
     padding: 15px 30px;
     @include m.FontRalewayRegular(14, 30, v.$defaultFontColor);
     text-align: center;
+    background: rgba(0, 152, 234, 1);
+    border: 3px solid rgba(77, 183, 240, 1);
     @media screen and (max-width: v.$MaxWidthS) {
-      max-width: 100%;
+          max-width: 100%;
+        }
+  }
+
+  &:hover {
+    .Btn{
+      background: rgba(12, 170, 255, 1);
+      border:3px solid rgba(123, 209, 255, 1);
+    }
+    svg{
+      display: block;
+      path{
+        fill:rgba(123, 209, 255, 1);
+      }
     }
   }
 

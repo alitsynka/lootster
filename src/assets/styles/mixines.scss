@@ -23,7 +23,7 @@
 @mixin CommonWrapper {
   width: 100%;
   height: 100%;
-  padding: 0 130px;
+  padding: 0 100px;
   @include FLexRow;
   justify-content: center;
   background: v.$defaultBGColor;
@@ -39,7 +39,7 @@
 @mixin CommonContainer($paddingVertical, $paddingHorizontal) {
   width: 100%;
   height: 100%;
-  max-width: 1440px;
+  max-width: 1240px;
   padding: $paddingVertical + px $paddingHorizontal + px;
   position: relative;
 
