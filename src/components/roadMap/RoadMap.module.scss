@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: flex-start;
   background: v.$defaultBGColor;
-  padding: 0 100px;
+  padding: 100px 100px;
 
   @media screen and (max-width: v.$MaxWidthXL) {
     padding: 60px 0;
