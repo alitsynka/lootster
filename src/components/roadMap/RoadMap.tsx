@@ -81,9 +81,19 @@ export const RoadMap = () => {
                         spaceBetween={30}
                         // loop={true}
                         speed={1000}
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false,
+                        // autoplay={{
+                        //     delay: 2500,
+                        //     disableOnInteraction: false,
+                        // }}
+                        breakpoints={{
+                            240: {
+                                spaceBetween: 20,
+                                centeredSlides: true
+                            },
+                            500: {
+                                spaceBetween: 30,
+                                centeredSlides: false
+                            },
                         }}
                         navigation={true}
                         modules={[Autoplay, Pagination, Navigation]}

@@ -1,12 +1,15 @@
 .swiper {
   width: 100%;
   height: auto; /* Сделает высоту адаптивной */
+  display: flex; /* Даем возможность слайдам выстраиваться */
+  justify-content: flex-start;
 }
 
 .swiper-wrapper {
   height: auto;
   //max-width: 1740px;
   display: flex; /* Даем возможность слайдам выстраиваться */
+  justify-content: flex-start;
 }
 
 .swiper-slide {

@@ -74,3 +74,99 @@
     }
   }
 }
+//.Wrapper2 {
+//  height: 100%;
+//  //width: 100%;
+//  //position: relative;
+//  //max-width: 1420px;
+//  min-height: 1400px;
+//
+//  .SliderWrapper {
+//    //width: 100%;
+//    min-height: 1400px;
+//    height: auto;
+//    height: 100%;
+//    max-width: 1240px;
+//
+//    .SliderItem {
+//      background: url('../../assets/images/sliderBG.png') no-repeat;
+//      background-size: 100% 100%;;
+//      height: auto;
+//      min-height: 655px;
+//      padding: 20px;
+//      width: 100% !important;
+//      min-width: 400px;
+//      max-width: 520px;
+//
+//      @media screen and (max-width: v.$MaxWidthS) {
+//        padding: 20px 10px;
+//      }
+//      @media screen and (max-width: v.$MaxWidthL) {
+//        min-height: 830px;
+//
+//      }
+//      @media screen and (min-width: 1700px) {
+//        min-height: 800px;
+//        min-width: 450px;
+//        max-width: 580px;
+//      }
+//
+//      .Img {
+//        object-fit: contain;
+//        @media screen and (max-width: 1700px) {
+//          max-height: 200px;
+//        }
+//        @media screen and (min-width: 1700px) {
+//          max-height: 350px;
+//        }
+//        @media screen and (max-width: v.$MaxWidthL) {
+//          max-height: 280px;
+//        }
+//        @media screen and (max-width: v.$MaxWidthS) {
+//          max-height: 170px;
+//        }
+//      }
+//
+//      .SubTitle {
+//        @include m.FontRalewayRegular(11, 16, v.$defaultDescFontColor);
+//        margin: 20px 0 5px 0;
+//        @media screen and (max-width: v.$MaxWidthS) {
+//          @include m.FontRalewayRegular(12, 16, v.$defaultDescFontColor);
+//        }
+//      }
+//
+//      .Title {
+//        @include m.FontRalewayRegular(26, 42, v.$defaultFontColor);
+//        margin-bottom: 20px;
+//        @media screen and (max-width: 1700px) {
+//          @include m.FontRalewayRegular(23, 34, v.$defaultFontColor);
+//        }
+//        @media screen and (max-width: v.$MaxWidthS) {
+//          @include m.FontRalewayRegular(21, 28, v.$defaultFontColor);
+//        }
+//      }
+//
+//      .List {
+//        @include m.FLexCol;
+//        gap: 20px;
+//        align-items: flex-start;
+//        @media screen and (max-width: 1700px) {
+//          gap: 15px;
+//        }
+//
+//        .ListItem {
+//          @include m.FontRalewayRegular(14, 21, v.$defaultFontColor);
+//          opacity: 0.9;
+//          @include m.FLexRow;
+//          align-items: flex-start;
+//
+//          .Dot {
+//            margin-right: 15px;
+//            position: relative;
+//            top: 10px;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}

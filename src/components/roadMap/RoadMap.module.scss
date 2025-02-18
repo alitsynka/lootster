@@ -2,27 +2,50 @@
 @use '../../assets/styles/variables' as v;
 
 .CommonWrapper {
-  display: flex;
   flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   background: v.$defaultBGColor;
+  padding: 0 100px;
+
+  @media screen and (max-width: v.$MaxWidthXL) {
+    padding: 60px 0;
+  }
+
   .Wrapper {
     @include m.CommonWrapper;
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 100%;
-    max-width: 1240px;
+    justify-content: flex-start;
+    max-width: 1420px;
+    @media screen and (max-width: v.$MaxWidthXL) {
+      padding: 0 50px;
+    }
+    @media screen and (max-width: v.$MaxWidthL) {
+      padding: 0 25px;
+    }
     .Title {
       @include m.TitleOfSection;
     }
   }
+
   .Wrapper2 {
+    width: 100%;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .SliderWrapper {
       width: 100%;
       height: 100%;
+      @media screen and (min-width: 1700px) {
+        max-width: 1600px;
+      }
 
       .SliderItem {
         background: url('../../assets/images/sliderBG.png') no-repeat;
@@ -31,22 +54,21 @@
         min-height: 655px;
         padding: 20px;
         width: 100%;
-        min-width: 400px;
-        max-width: 520px;
+        min-width: 350px;
+        max-width: 450px;
 
-        @media screen and (max-width: v.$MaxWidthS) {
-          padding: 20px 10px;
+        @media screen and (max-width: 950px) {
+          min-height: 725px;
         }
         @media screen and (min-width: 1700px) {
+          min-height: 750px;
           min-width: 450px;
           max-width: 580px;
         }
-        @media screen and (max-width: v.$MaxWidthL) {
-          min-height: 830px;
-
-        }
-        @media screen and (min-width: 1700px) {
-          min-height: 940px;
+        @media screen and (max-width: v.$MaxWidthS) {
+          min-width: 300px;
+          max-width: 360px;
+          min-height: 665px;
         }
 
         .Img {
@@ -55,7 +77,7 @@
             max-height: 200px;
           }
           @media screen and (min-width: 1700px) {
-            max-height: 350px;
+            max-height: 320px;
           }
           @media screen and (max-width: v.$MaxWidthL) {
             max-height: 280px;
@@ -109,4 +131,3 @@
     }
   }
 }
-
