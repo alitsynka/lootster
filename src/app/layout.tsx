@@ -4,6 +4,9 @@ import "../assets/styles/reset.scss";
 import Head from "next/head";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 const Press_Start = Press_Start_2P({
     variable: "--font-Press-Start-2P",

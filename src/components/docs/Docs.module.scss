@@ -8,6 +8,7 @@
     @include m.CommonContainer(v.$defaultContainerPadding, 0);
     @include m.FLexRow;
     justify-content: space-between;
+    align-items: flex-end;
     @media screen and (max-width: v.$MaxWidthL) {
       flex-direction: column;
       gap: 40px;
@@ -22,8 +23,9 @@
       }
 
       .Desc {
-        @include m.FontRalewayRegular(16, 28, v.$defaultDescFontColor);
+        @include m.FontRalewayRegular(14, 28, v.$defaultDescFontColor);
         margin-bottom: 35px;
+        max-width: 465px;
       }
 
       .Btn {

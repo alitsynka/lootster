@@ -21,17 +21,17 @@ const faqData = [
     }, {
         expanded: ExpandedEnum.panel2,
         title: 'How to earn tokens?',
-        topPosition: 30,
+        topPosition: 16,
         desc: 'Initially, users earn LTR and opening ches completing various in-game quests. As the ecosystem grows, additional ways to earn token become available. These include participating in PvP games, providing liquidity, invitin referrals, using free lottery tickets, and receiving cashback from fees, alongside the original options of opening chests and completing quests.'
     }, {
         expanded: ExpandedEnum.panel3,
         title: 'How to earn tokens?',
-        topPosition: 55,
+        topPosition: 34,
         desc: 'Initially, users earn LTR and opening ches completing various in-game quests. As the ecosystem grows, additional ways to earn token become available. These include participating in PvP games, providing liquidity, invitin referrals, using free lottery tickets, and receiving cashback from fees, alongside the original options of opening chests and completing quests.'
     }, {
         expanded: ExpandedEnum.panel4,
         title: 'How to earn tokens?',
-        topPosition: 80,
+        topPosition: 52,
         desc: 'Initially, users earn LTR and opening ches completing various in-game quests. As the ecosystem grows, additional ways to earn token become available. These include participating in PvP games, providing liquidity, invitin referrals, using free lottery tickets, and receiving cashback from fees, alongside the original options of opening chests and completing quests.'
     },
 ]

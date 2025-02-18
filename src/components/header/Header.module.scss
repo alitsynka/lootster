@@ -35,7 +35,7 @@
         li {
 
           .NavLink {
-            @include m.FontRalewayRegular(15, 16, v.$defaultFontColor);
+            @include m.FontRalewayRegular(14, 16, v.$defaultFontColor);
           }
 
           .ActiveNavLink {

@@ -58,7 +58,7 @@
 }
 
 @mixin TitleOfSection {
-  @include FontRalewayRegular(36, 46, v.$defaultFontColor);
+  @include FontRalewayRegular(33, 42, v.$defaultFontColor);
   margin-bottom: 50px;
   @media screen and (max-width: v.$MaxWidthS) {
     @include FontRalewayRegular(30, 36, v.$defaultFontColor);

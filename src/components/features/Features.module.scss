@@ -52,7 +52,7 @@
         }
 
         p {
-          @include m.FontRalewayRegular(16, 27, v.$defaultFontColor);
+          @include m.FontRalewayRegular(14, 24, v.$defaultFontColor);
           text-align: center;
           width: 100%;
           padding: 0 35px;

@@ -37,7 +37,7 @@
       }
 
       .Title {
-        @include m.FontRalewayRegular(45, 58, v.$defaultFontColor);
+        @include m.FontRalewayRegular(42, 54, v.$defaultFontColor);
         @media screen and (max-width: v.$MaxWidthS) {
           @include m.FontRalewayRegular(40, 52, v.$defaultFontColor);
         }
@@ -47,10 +47,10 @@
       }
 
       .Desc {
-        @include m.FontRalewayRegular(16, 28, v.$defaultFontColor);
+        @include m.FontRalewayRegular(14, 21, v.$defaultFontColor);
         opacity: 0.7;
         @media screen and (max-width: v.$MaxWidthXS) {
-          @include m.FontRalewayRegular(14, 25, v.$defaultFontColor);
+          @include m.FontRalewayRegular(14, 21, v.$defaultFontColor);
         }
       }
     }

@@ -45,12 +45,12 @@
           background-color: rgba(22, 28, 66, 1);
 
           .Title {
-            @include m.FontRalewayRegular(26, 44, v.$defaultFontColor);
+            @include m.FontRalewayRegular(23, 42, v.$defaultFontColor);
             margin-bottom: 15px;
           }
 
           .Desc {
-            @include m.FontRalewayRegular(16, 28, v.$defaultFontColor);
+            @include m.FontRalewayRegular(14, 24, v.$defaultFontColor);
             opacity: 0.9;
           }
         }
@@ -86,7 +86,7 @@
             @include m.CommonCornersStyles;
 
             p {
-              @include m.FontRalewayRegular(16, 29, v.$defaultFontColor);
+              @include m.FontRalewayRegular(14, 24, v.$defaultFontColor);
             }
           }
         }

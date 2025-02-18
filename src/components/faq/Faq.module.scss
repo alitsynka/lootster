@@ -42,14 +42,14 @@
         z-index: 999;
 
         &:first-child {
-          .AccordionSummary {
-            padding-bottom: 35px;
-          }
+          //.AccordionSummary {
+          //  padding-bottom: 25px;
+          //}
         }
 
         &:nth-child(4) {
           .AccordionSummary {
-            padding-bottom: 20px;
+            padding: 25px 50px 25px 50px;
           }
 
           .AccordionSummaryClosed {
@@ -61,7 +61,7 @@
         }
 
         .AccordionSummary {
-          padding: 25px 50px 30px 50px;
+          padding: 35px 50px 20px 50px;
           background: url("../../assets/images/accordionSummary.png") no-repeat;
           background-size: 100% 100%;
 
@@ -73,7 +73,7 @@
           }
 
           .AccordionTitle {
-            @include m.FontRalewayRegular(26, 26, v.$accordionFontColor);
+            @include m.FontRalewayRegular(23, 26, v.$accordionFontColor);
 
             @media screen and (max-width: v.$MaxWidthS) {
               @include m.FontRalewayRegular(20, 20, v.$accordionFontColor);
@@ -86,10 +86,9 @@
 
 
         .AccordionDetails {
-          padding: 20px 50px 67px 50px;
+          padding: 25px 50px 40px 50px;
           background: url("../../assets/images/accordionDetails.png") no-repeat;
           background-size: 100% 100%;
-          //border: 2px dashed darkorchid;
 
           @media screen and (max-width: v.$MaxWidthXS) {
             padding: 0 20px 37px 20px;
@@ -98,11 +97,7 @@
           }
 
           .Desc {
-            @include m.FontRalewayRegular(16, 26, v.$accordionFontColor);
-
-            @media screen and (max-width: v.$MaxWidthXS) {
-              @include m.FontRalewayRegular(14, 21, v.$accordionFontColor);
-            }
+            @include m.FontRalewayRegular(14, 24, v.$accordionFontColor);
           }
         }
       }

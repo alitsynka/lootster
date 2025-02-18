@@ -11,11 +11,11 @@ export const Features = () => {
                 <div className={style.CardWrapper}>
                     <div className={style.CardSection}>
                         {/*<Image src={book} alt={''}/>*/}
-                        <p>Fair Play via smart contracts</p>
+                        <p>Fair Play<br/>via smart<br/> contracts</p>
                     </div>
                     <div className={style.CardSection}>
                         {/*<Image src={book} alt={''}/>*/}
-                        <p>Transparency on the TON blockchain</p>
+                        <p>Transparency<br/> on the TON blockchain</p>
                     </div>
                     <div className={style.CardSection}>
                         {/*<Image src={book} alt={''}/>*/}

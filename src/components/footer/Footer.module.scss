@@ -34,7 +34,7 @@
 
     .Title {
       grid-area: logo;
-      @include m.FontRalewayRegular(28, 34, v.$defaultFontColor);
+      @include m.FontRalewayRegular(25, 34, v.$defaultFontColor);
     }
 
     .List {
@@ -48,7 +48,7 @@
         }
 
         a {
-          @include m.FontRalewayRegular(16, 16, v.$defaultFontColor);
+          @include m.FontRalewayRegular(14, 16, v.$defaultFontColor);
 
         }
       }
@@ -60,7 +60,7 @@
           text-align: left;
 
           a {
-            @include m.FontRalewayRegular(16, 16, v.$defaultFontColor);
+            @include m.FontRalewayRegular(14, 16, v.$defaultFontColor);
             text-decoration: underline;
           }
         }
@@ -73,13 +73,13 @@
       grid-area: email;
 
       p {
-        @include m.FontRalewayRegular(14, 23, rgba(119, 123, 153, 1));
+        @include m.FontRalewayRegular(11, 21, rgba(119, 123, 153, 1));
         text-align: left;
         margin-bottom: 15px;
       }
 
       .Email {
-        @include m.FontRalewayRegular(16, 30, v.$defaultFontColor);
+        @include m.FontRalewayRegular(14, 21, v.$defaultFontColor);
         @media screen and (max-width: v.$MaxWidthM) {
           font-size: 14px;
         }

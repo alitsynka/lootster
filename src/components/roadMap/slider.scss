@@ -1,74 +1,14 @@
-.slick-track {
-  display: flex !important;
-  max-width: 100%;
-  @media screen and (max-width: 540px) {
-    justify-content: center !important;
-  }
+.swiper {
+  width: 100%;
+  height: auto; /* Сделает высоту адаптивной */
 }
 
-.slick-slide {
-  flex: 0 0 auto !important; // Запрещает растягивание
-  width: auto !important;
-  min-width: calc(100% / 4) !important; /* Устанавливаем ширину слайдов */
-
-  @media screen and (max-width: 768px) {
-    min-width: calc(100% / 2) !important; /* 2 слайда */
-  }
-  @media screen and (max-width: 640px) {
-    min-width: calc(100% / 5) !important;
-  }
-  @media screen and (max-width: 540px) {
-    min-width: 100% !important; /* 1 слайд на всю ширину */
-  }
+.swiper-wrapper {
+  height: auto;
+  //max-width: 1740px;
+  display: flex; /* Даем возможность слайдам выстраиваться */
 }
 
-.slick-next {
-  &:before {
-    content: none !important;
-  }
-
-  @media screen and (max-width: 640px) {
-    position: absolute;
-    bottom: -50px;
-    right: 0;
-    width: 40px;
-    height: 30px;
-    transform: translate(0, 0) !important;
-    top: auto;
-
-    &:after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 30px;
-      background: url("../../assets/images/arrownext.svg") no-repeat;
-      background-size: contain;
-    }
-  }
-
-}
-.slick-prev {
-  &:before {
-    content: none !important;
-  }
-
-  @media screen and (max-width: 640px) {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 40px;
-    height: 30px;
-    transform: translate(0, 0) !important;
-    top: auto;
-
-    &:after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 30px;
-      background: url("../../assets/images/arrow.svg") no-repeat;
-      background-size: contain;
-    }
-  }
-
+.swiper-slide {
+  width: 100% !important; /* Позволяет слайдам занимать нужное место */
 }

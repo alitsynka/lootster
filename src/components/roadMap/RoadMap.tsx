@@ -2,27 +2,12 @@
 import style from './RoadMap.module.scss';
 import './slider.scss';
 import Image from "next/image";
-import Slider from "react-slick";
 import dot from '../../assets/images/dot.svg'
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, Navigation, Pagination} from "swiper/modules";
 
 export const RoadMap = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 900,
-        slidesToShow: 2.5,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        slidesToScroll: 1,
-        // pauseOnHover: true,
-        variableWidth: true,
-        responsive:[{
-            breakpoint:760,
-            settings:{
-                slidesToShow: 1
-            }
-        }],
-    };
+
     const roadMapInfo = [
         {
             id: 1,
@@ -66,19 +51,49 @@ export const RoadMap = () => {
                 {value: 'Airdrop for various NFT holders', id: 7},
             ]
         },
+        {
+            id: 4,
+            title: 'Update (Q2 2025)',
+            subTitle: 'Stage 3',
+            img: require('../../assets/images/gnome.png'),
+            list: [
+                {value: 'Crack the Egg game release', id: 1},
+                {value: 'In-game token swap', id: 2},
+                {value: 'NFT boosters for Lootster game', id: 3},
+                {value: 'More Languages support', id: 4},
+                {value: 'CEX listing', id: 5},
+                {value: 'Open game data', id: 6},
+                {value: 'Airdrop for various NFT holders', id: 7},
+            ]
+        },
+
     ]
 
     return (
-        <div className={style.Wrapper} id={'Roadmap'}>
-            <div className={style.Container}>
+        <div className={style.CommonWrapper} id={'Roadmap'}>
+            <div className={style.Wrapper}>
                 <h2 className={style.Title}>Roadmap</h2>
+            </div>
+            <div className={style.Wrapper2}>
                 <div className={style.SliderWrapper}>
-                    <Slider {...settings} className={style.Slider}>
+                    <Swiper
+                        slidesPerView={'auto'}
+                        spaceBetween={30}
+                        // loop={true}
+                        speed={1000}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="mySwiper"
+                    >
                         {
                             roadMapInfo.map(item => {
                                 return (
-                                    <div className={style.SliderItem} key={item.id}>
-                                        <Image src={item.img} alt={''} className={style.Img}/>
+                                    <SwiperSlide className={style.SliderItem} key={item.id}>
+                                        <Image src={item.img} alt={item.title} className={style.Img}/>
                                         <p className={style.SubTitle}>{item.subTitle}</p>
                                         <h3 className={style.Title}>{item.title}</h3>
                                         <ul className={style.List}>
@@ -93,10 +108,10 @@ export const RoadMap = () => {
                                                 })
                                             }
                                         </ul>
-                                    </div>
+                                    </SwiperSlide>
                                 )
                             })}
-                    </Slider>
+                    </Swiper>
                 </div>
             </div>
         </div>
